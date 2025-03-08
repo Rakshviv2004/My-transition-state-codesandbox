@@ -1,0 +1,88 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* App container */
+.App {
+  min-height: 100vh;
+  transition: background-color 1s ease-in-out;
+}
+
+/* White section */
+.white-section {
+  height: 100vh;
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+/* Black section */
+.black-section {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px); /* Subtle motion for smooth entry */
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+/* When section becomes visible */
+.black-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content Styling */
+.content {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+}
+
+/* Text styles */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
